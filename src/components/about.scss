@@ -1,15 +1,12 @@
 .about-section{
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     padding: 50px 0;
 
     .about-main{
         width: 1000px;
         height: 450px;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -39,8 +36,6 @@
             text-align: right;
             position: relative;
             z-index: 3;
-            // background-color: rgba(0, 255, 13, 0.342);
-
         }
 
     
@@ -60,7 +55,7 @@
             .knife {
                 height: 400px;
                 position: absolute;
-                z-index: 2; // Ensures knife is on top of G
+                z-index: 2;
             }
         }
     
@@ -68,11 +63,8 @@
             text-align: left;
             position: relative;
             z-index: 3;
-            // background-color: rgba(255, 0, 242, 0.342);
         }
     }
-
-
 }
 
 @keyframes knife-spin {
@@ -85,10 +77,6 @@
     50% {
         transform: rotate(-10deg);
     }
-    // 75% {
-    //     transform: rotate(0deg);
-
-    // }
     100%{
         transform: rotate(0deg);
     }

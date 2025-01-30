@@ -6,11 +6,11 @@
 
 
     .group-87{
-        width: 146px;
-        height: 146px;
+        width: 130px;
+        height: 130px;
     }
     .laurel-main{
-        // background-col   or: antiquewhite;
+        // background-color: antiquewhite;
         display: flex;
         justify-content: space-between;
         width: 1050px;
@@ -33,7 +33,7 @@
                 grid-template-columns: 1fr 1fr;  /* Creates two equal columns */
                 gap: 32px;  /* Optional: adds space between grid items */
                 // background-color: aliceblue;
-                width: 600px    ;
+                width: 600px;
 
                 img{
                     width: 79px;
@@ -44,15 +44,10 @@
                     display: flex;
                     gap: 32px;
 
-                    h2{
-                        color: #DCCA87;
-                    }
-
                     p{
                         font-size: 16px;
                         font-family: var(--font2);
                         font-weight: normal;
-                        color: #AAAAAA;
                         
                     }
                 }
@@ -61,8 +56,86 @@
 
         .laurel-right{
             width: 400px;
-            height: 500px;
+            height: 400px;
         }
     }
-    
+}
+
+@media (max-width: 500px) {
+    .laurel{
+        margin: auto;
+        padding: 0;
+        min-height: 180vh;
+        .laurel-main{
+            flex-direction: column;
+            width: 100%;
+
+
+            .laurel-left{
+                width: 100%;
+                padding-left: 40px;
+                h1{
+                    font-size: 45px;
+                    margin: 0;
+                    padding: 20px 0 30px 0;
+                }
+                .laurel-grid{
+                    grid-template-columns: 1fr;
+                    width: 100%;
+
+                    img{
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .grid-flex{
+                        h2{
+                            font-size: 20px;
+                        }
+                        p{
+                            font-size: 12px;
+
+                        }
+                    }
+                }
+            }
+
+            .laurel-right{
+                width: 350px;
+                margin: 20px auto;
+            }
+        }
+
+        .group-87{
+            width: 100px;
+            height: 100px;
+            margin: 0 0 30px 40px;
+        }
+    }
+}
+
+@media (min-width: 501px) and (max-width: 900px){
+   .laurel{
+        padding: 0;
+        margin: 0;
+        min-width: 762px;
+
+        .laurel-main{
+            width: 100%;
+
+            .laurel-left{
+                position: relative;
+                z-index: 3;
+                margin: auto;
+            }
+
+            .laurel-right{
+                display: none;
+            }
+        }
+        .group-87{
+            width: 100px;
+            height: 100px;
+            margin: 0 0 30px 40px;
+        }
+   }
 }

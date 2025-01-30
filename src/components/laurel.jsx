@@ -20,28 +20,30 @@ function Laurel() {
  ]
   return (
     <section className='laurel'>
-        <img src={group87} className='group-87'/>
-        <div className='laurel-main'>
-            <div className='laurel-left'>
-                <p>Awards & recognition</p>
-                <img src={Vector1}/>
-                <h1>Our Laurels</h1>
-                <div className='laurel-grid'>
-                    {laurels.map((laurel) => 
-                        <div key={laurel.title}>
-                            <div className='grid-flex'>
-                                <img src={laurel.Image}/>
-                                <div>
-                                    <h2>{laurel.title}</h2>
-                                    <p>{laurel.text}</p>
+        {/* <div className='overlay'> */}
+            <img src={group87} className='group-87'/>
+            <div className='laurel-main'>
+                <div className='laurel-left'>
+                    <p>Awards & recognition</p>
+                    <img src={Vector1}/>
+                    <h1>Our Laurels</h1>
+                    <div className='laurel-grid'>
+                        {laurels.map((laurel) => 
+                            <div key={laurel.title}>
+                                <div className='grid-flex'>
+                                    <img src={laurel.Image}/>
+                                    <div>
+                                        <h2>{laurel.title}</h2>
+                                        <p>{laurel.text}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </div>
                 </div>
+                <img src={group43} className='laurel-right'/>
             </div>
-            <img src={group43} className='laurel-right'/>
-        </div>
+        {/* </div> */}
     </section>
 
   )
